@@ -8,7 +8,7 @@ delivery_button = (By.LINK_TEXT, '/information/delivery')
 
 class HomePage(BasePage):
     def __init__(self, driver):
-        # super().__init__(driver)
+        super().__init__(driver)
         self.driver = driver
 
     def open(self):
