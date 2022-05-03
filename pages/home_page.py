@@ -9,6 +9,7 @@ pay_info_button_by_header = (By.XPATH, '//*[@id="__layout"]/div/div[1]/header/di
 contacts_button_by_header = (By.XPATH, '//*[@id="__layout"]/div/div[1]/header/div[2]/ul/li[5]/a')
 cart_button_by_header = (By.CLASS_NAME, 'cart')
 search_button_by_header = (By.XPATH, '//*[@id="__layout"]/div/div[1]/header/div[3]/div[1]/li/a')
+search_title = (By.XPATH, '//*[@id="__layout"]/div/div[1]/header/div[4]/div/input')
 reverting_logo_button_by_header = (By.XPATH, '//*[@id="__layout"]/div/div[1]/header/div[2]/a/div[1]/img')
 
 catalog_button_by_column_menu = (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div[3]/ul/li[1]/a')
@@ -61,6 +62,10 @@ class HomePage(BasePage):
     @property
     def open_search_by_header(self):
         return self.find_element(search_button_by_header)
+
+    @property
+    def open_search_by_header_check(self):
+        return self.find_element(search_title)
 
     @property
     def reverting_logo_by_header(self):

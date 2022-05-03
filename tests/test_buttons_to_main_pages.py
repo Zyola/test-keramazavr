@@ -57,14 +57,6 @@ def test_open_cart_by_header(driver):
     assert 'Оформление заказа' in cart_page.check_cart_title.text
 
 
-def test_search_by_header(driver):
-    home_page = HomePage(driver)
-    home_page.open()
-    home_page.open_search_by_header.click()
-    search_title = driver.find_element(By.XPATH, '//*[@id="__layout"]/div/div[1]/header/div[4]/div/input')
-    assert '' in search_title.text
-
-
 def test_reverting_logo_by_header(driver):
     home_page = HomePage(driver)
     home_page.open()
