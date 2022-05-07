@@ -26,6 +26,27 @@ pay_info_button_by_bottom_menu = (By.XPATH, '//*[@id="__layout"]/div/div[3]/div[
 articles_button_by_bottom_menu = (By.XPATH, '//*[@id="__layout"]/div/div[3]/div[1]/div[1]/div[3]/ul/li[5]/a')
 privacy_policy_by_bottom_menu = (By.XPATH, '//*[@id="__layout"]/div/div[3]/div[1]/div[1]/div[3]/ul/li[6]/a')
 
+move_up_button = (By.CLASS_NAME, 'toTop')
+main_logo = (By.XPATH, '//*[@id="__layout"]/div/div[1]/header/div[2]/a/div[1]/img')
+
+popular_arrow_prev = (By.XPATH, '//*[@id="__layout"]/div/div[2]/section[2]/div/div/div[1]/i')
+popular_arrow_next = (By.XPATH, '//*[@id="__layout"]/div/div[2]/section[2]/div/div/div[3]/i')
+popular_first_page_scroll_button = (By.XPATH, '//*[@id="__layout"]/div/div[2]/section[2]/div/div/ul/li[1]')
+popular_second_page_scroll_button = (By.XPATH, '//*[@id="__layout"]/div/div[2]/section[2]/div/div/ul/li[2]')
+popular_first_page_product = (By.XPATH, '//*[@id="__layout"]/div/div[2]/section[2]/div/div/div[2]/div/div[4]/div/a')
+popular_second_page_product = (By.XPATH, '//*[@id="__layout"]/div/div[2]/section[2]/div/div/div[2]/div/div[6]/div/a')
+popular_target = (By.XPATH, '//*[@id="__layout"]/div/div[2]/section[2]')
+
+buyers_choice_arrow_prev = (By.XPATH, '//*[@id="__layout"]/div/div[2]/section[4]/div/div/div[1]/i')
+buyers_choice_arrow_next = (By.XPATH, '//*[@id="__layout"]/div/div[2]/section[4]/div/div/div[3]/i')
+buyers_choice_first_page_scroll_button = (By.XPATH, '//*[@id="__layout"]/div/div[2]/section[4]/div/div/ul/li[1]')
+buyers_choice_second_page_scroll_button = (By.XPATH, '//*[@id="__layout"]/div/div[2]/section[4]/div/div/ul/li[2]')
+buyers_choice_first_page_product = (By.XPATH, '//*[@id="__layout"]/div/div[2]/section[4]/div/div/div[2]/div/div['
+                                              '5]/div/div/div[1]/a/div[1]')
+buyers_choice_second_page_product = (By.XPATH, '//*[@id="__layout"]/div/div[2]/section[4]/div/div/div[2]/div/div['
+                                               '7]/div/div/div[1]/a/div[1]')
+buyers_choice_target = (By.XPATH, '//*[@id="__layout"]/div/div[2]/section[4]/div[1]/div/div[3]')
+
 
 class HomePage(BasePage):
     def __init__(self, driver):
@@ -118,3 +139,67 @@ class HomePage(BasePage):
     @property
     def open_privacy_policy_by_bottom_menu(self):
         return self.find_element(privacy_policy_by_bottom_menu)
+
+    @property
+    def open_move_up(self):
+        return self.find_element(move_up_button)
+
+    @property
+    def check_main_logo(self):
+        return self.find_element(main_logo)
+
+    @property
+    def popular_arrow_prev(self):
+        return self.find_element(popular_arrow_prev)
+
+    @property
+    def popular_arrow_next(self):
+        return self.find_element(popular_arrow_next)
+
+    @property
+    def popular_first_page_scroll_button(self):
+        return self.find_element(popular_first_page_scroll_button)
+
+    @property
+    def popular_second_page_scroll_button(self):
+        return self.find_element(popular_second_page_scroll_button)
+
+    @property
+    def popular_first_page_product_title(self):
+        return self.find_element(popular_first_page_product)
+
+    @property
+    def popular_second_page_product_title(self):
+        return self.find_element(popular_second_page_product)
+
+    @property
+    def popular_target_field(self):
+        return self.find_element(popular_target)
+
+    @property
+    def buyers_choice_arrow_prev(self):
+        return self.find_element(buyers_choice_arrow_prev)
+
+    @property
+    def buyers_choice_arrow_next(self):
+        return self.find_element(buyers_choice_arrow_next)
+
+    @property
+    def buyers_choice_first_page_scroll_button(self):
+        return self.find_element(buyers_choice_first_page_scroll_button)
+
+    @property
+    def buyers_choice_second_page_scroll_button(self):
+        return self.find_element(buyers_choice_second_page_scroll_button)
+
+    @property
+    def buyers_choice_first_page_product_title(self):
+        return self.find_element(buyers_choice_first_page_product)
+
+    @property
+    def buyers_choice_second_page_product_title(self):
+        return self.find_element(buyers_choice_second_page_product)
+
+    @property
+    def buyers_choice_target_field(self):
+        return self.find_element(buyers_choice_target)
