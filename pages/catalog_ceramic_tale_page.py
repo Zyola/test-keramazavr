@@ -23,6 +23,25 @@ add_second_product = (By.XPATH, '//*[@id="__layout"]/div/section/div[3]/div[4]/d
 second_product = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[3]/div[2]')
 add_to_cart = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[3]/div/div[4]/div')
 
+sorting = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[1]/div[2]')
+sorting_cheapest = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[1]/div[2]/div/div[2]/div[2]')
+sorting_the_most_expensive = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[1]/div[2]/div/div[2]/div[3]')
+cost_first_product_after_sorting = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[3]/div[1]/a/div[3]/span')
+cost_second_product_after_sorting = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[3]/div[3]/a/div[3]')
+
+show_filters = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[1]/div[1]')
+appointment_filter = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[2]/div[1]/div')
+appointment_filter_for_walls = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[2]/div[1]/div['
+                                          '2]/div/div/div[1]/label')
+product_for_walls_title = (By.XPATH, '//*[@id="__layout"]/div/section/div[3]/div[2]/div/div[1]/div[2]/div/ul/li[6]/div')
+products_filtered = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[3]/span[3]')
+product_control_object = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[4]/div[1]/div[1]/a')
+application_filter = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[2]/div[2]/div')
+application_filter_for_kitchen = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[2]/div[2]/div['
+                                            '2]/div/div/div[1]/label')
+product_for_kitchen_title = (By.XPATH, '//*[@id="__layout"]/div/section/div[3]/div[2]/div/div[1]/div[2]/div/ul/li['
+                                       '7]/div')
+
 
 class CeramicTalePage(CatalogPage):
     def __init__(self, driver):
@@ -100,3 +119,59 @@ class CeramicTalePage(CatalogPage):
     @property
     def amount_of_product_value(self):
         return self.find_element(amount_of_product)
+
+    @property
+    def sorting_button(self):
+        return self.find_element(sorting)
+
+    @property
+    def sorting_cheapest_button(self):
+        return self.find_element(sorting_cheapest)
+
+    @property
+    def sorting_the_most_expensive_button(self):
+        return self.find_element(sorting_the_most_expensive)
+
+    @property
+    def cost_first_product_after_sorting_value(self):
+        return self.find_element(cost_first_product_after_sorting)
+
+    @property
+    def cost_second_product_after_sorting_value(self):
+        return self.find_element(cost_second_product_after_sorting)
+
+    @property
+    def show_filters_button(self):
+        return self.find_element(show_filters)
+
+    @property
+    def appointment_filter_button(self):
+        return self.find_element(appointment_filter)
+
+    @property
+    def appointment_filter_for_walls_button(self):
+        return self.find_element(appointment_filter_for_walls)
+
+    @property
+    def products_filtered_button(self):
+        return self.find_element(products_filtered)
+
+    @property
+    def product_control_object_button(self):
+        return self.find_element(product_control_object)
+
+    @property
+    def product_for_walls(self):
+        return self.find_element(product_for_walls_title)
+
+    @property
+    def application_filter_button(self):
+        return self.find_element(application_filter)
+
+    @property
+    def application_filter_for_kitchen_button(self):
+        return self.find_element(application_filter_for_kitchen)
+
+    @property
+    def product_for_kitchen(self):
+        return self.find_element(product_for_kitchen_title)
