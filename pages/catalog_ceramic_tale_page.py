@@ -1,7 +1,6 @@
 from pages.catalog_page import CatalogPage
 from selenium.webdriver.common.by import By
 
-
 ceramic_tale = (By.XPATH, '//*[@id="__layout"]/div/section/div/div[2]/div[1]')
 ceramic_tale_left_menu = (By.XPATH, '//*[@id="__layout"]/div/div[1]/div/div/div[2]/ul/li[4]/a')
 ceramic_tale_by_icon_button = (By.XPATH, '//*[@id="__layout"]/div/div[2]/div[1]/div/a[4]')
@@ -41,6 +40,39 @@ application_filter_for_kitchen = (By.XPATH, '//*[@id="__layout"]/div/section/div
                                             '2]/div/div/div[1]/label')
 product_for_kitchen_title = (By.XPATH, '//*[@id="__layout"]/div/section/div[3]/div[2]/div/div[1]/div[2]/div/ul/li['
                                        '7]/div')
+manufacturer_filter = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[2]/div[3]/div')
+manufacturer_filter_by_atlas_concorde = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[2]/div[3]/div['
+                                                   '2]/div/div/div[1]/label')
+product_by_atlas_concorde = (By.XPATH, '//*[@id="__layout"]/div/section/div[3]/div[2]/div/div[1]/div[2]/div/ul/li['
+                                       '5]/div')
+surface_pattern_filter = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[2]/div[4]/div')
+surface_pattern_filter_wood = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[2]/div[4]/div['
+                                         '2]/div/div/div[1]/label')
+product_wood_pattern = (By.XPATH, '//*[@id="__layout"]/div/section/div[3]/div[2]/div/div[1]/div[2]/div/ul/li[8]/div')
+product_control_object_button_wood = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[4]/div[2]/div[1]/a/div[1]')
+colour_filter = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[2]/div[5]/div[1]')
+colour_filter_white = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[2]/div[5]/div[2]/div/div/div['
+                                 '1]/label')
+product_colour_white = (By.XPATH, '//*[@id="__layout"]/div/section/div[3]/div[2]/div/div[1]/div[2]/div/ul/li[9]/div')
+form_filter = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[2]/div[6]')
+form_filter_wild_boar = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[2]/div[6]/div[2]/div/div/div['
+                                   '1]/label')
+product_filter_wild_boar = (By.XPATH, '//*[@id="__layout"]/div/section/div[3]/div[2]/div/div[1]/div[2]/div/ul/li['
+                                      '10]/div')
+surface_filter = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[2]/div[7]/div[1]')
+surface_filter_matt = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[2]/div[7]/div[2]/div/div/div['
+                                 '1]/label')
+product_filter_matt = (By.XPATH, '//*[@id="__layout"]/div/section/div[3]/div[2]/div/div[1]/div[2]/div/ul/li[9]/div')
+size_filter = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[2]/div[8]/div')
+size_filter_100_100 = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[2]/div[8]/div[2]/div/div/div['
+                                 '1]/label')
+product_filter_size = (By.XPATH, '//*[@id="__layout"]/div/section/div[3]/div[2]/div/div[1]/div[2]/div/ul/li[4]/div')
+cost_filter = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[2]/div[9]/div')
+cost_filter_max = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[2]/div[9]/div[2]/div/div['
+                             '2]/div/div/div[4]/div')
+cost_target = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[2]/div[2]/div[9]/div[2]/div/div[2]/div/div/div['
+                         '2]/div[1]/div[2]')
+product_filter_cost = (By.XPATH, '//*[@id="__layout"]/div/section/div[2]/div[4]/div[1]/div[1]/div[3]/div/span[1]')
 
 
 class CeramicTalePage(CatalogPage):
@@ -175,3 +207,95 @@ class CeramicTalePage(CatalogPage):
     @property
     def product_for_kitchen(self):
         return self.find_element(product_for_kitchen_title)
+
+    @property
+    def manufacturer_filter_button(self):
+        return self.find_element(manufacturer_filter)
+
+    @property
+    def manufacturer_filter_atlas_concorde(self):
+        return self.find_element(manufacturer_filter_by_atlas_concorde)
+
+    @property
+    def product_by_atlas_concorde(self):
+        return self.find_element(product_by_atlas_concorde)
+
+    @property
+    def surface_pattern_filter_button(self):
+        return self.find_element(surface_pattern_filter)
+
+    @property
+    def surface_pattern_filter_wood(self):
+        return self.find_element(surface_pattern_filter_wood)
+
+    @property
+    def product_wood_pattern_tittle(self):
+        return self.find_element(product_wood_pattern)
+
+    @property
+    def product_control_object_button_wood(self):
+        return self.find_element(product_control_object_button_wood)
+
+    @property
+    def colour_filter_button(self):
+        return self.find_element(colour_filter)
+
+    @property
+    def colour_filter_white_button(self):
+        return self.find_element(colour_filter_white)
+
+    @property
+    def product_colour_white_title(self):
+        return self.find_element(product_colour_white)
+
+    @property
+    def form_filter_button(self):
+        return self.find_element(form_filter)
+
+    @property
+    def form_filter_wild_boar_button(self):
+        return self.find_element(form_filter_wild_boar)
+
+    @property
+    def product_form_wild_boar_title(self):
+        return self.find_element(product_filter_wild_boar)
+
+    @property
+    def surface_filter_button(self):
+        return self.find_element(surface_filter)
+
+    @property
+    def surface_filter_matt_button(self):
+        return self.find_element(surface_filter_matt)
+
+    @property
+    def product_surface_matt_title(self):
+        return self.find_element(product_filter_matt)
+
+    @property
+    def size_filter_button(self):
+        return self.find_element(size_filter)
+
+    @property
+    def size_filter_100_100_button(self):
+        return self.find_element(size_filter_100_100)
+
+    @property
+    def product_size_100_100_title(self):
+        return self.find_element(product_filter_size)
+
+    @property
+    def cost_filter_button(self):
+        return self.find_element(cost_filter)
+
+    @property
+    def cost_filter_max_button(self):
+        return self.find_element(cost_filter_max)
+
+    @property
+    def cost_target_field(self):
+        return self.find_element(cost_target)
+
+    @property
+    def product_cost_filter(self):
+        return self.find_element(product_filter_cost)
