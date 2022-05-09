@@ -10,12 +10,6 @@ from pages.cart_page import CartPage
 import allure
 
 
- """
- Запуск тестов:
- pytest --alluredir=/home/zyola/test-keramazavr/tests/allure-reports
- """
-
-
 @allure.feature('Buttons to main pages')
 @allure.story('Open catalog by header')
 def test_open_catalog_by_header(driver):
