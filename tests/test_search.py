@@ -1,7 +1,10 @@
 from pages.home_page import HomePage
 from pages.search_page import SearchPage
+import allure
 
 
+@allure.feature('Search')
+@allure.story('Search by header open')
 def test_search_by_header_open(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -10,6 +13,8 @@ def test_search_by_header_open(driver):
     assert '' in search_title.text
 
 
+@allure.feature('Search')
+@allure.story('Search by left menu open')
 def test_search_by_left_menu_open(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -20,6 +25,8 @@ def test_search_by_left_menu_open(driver):
     assert '' in search_title.text
 
 
+@allure.feature('Search')
+@allure.story('Search by header result name')
 def test_search_by_header_result_name(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -31,6 +38,8 @@ def test_search_by_header_result_name(driver):
     assert 'Wood Abba' in search_page.product_name_title.text
 
 
+@allure.feature('Search')
+@allure.story('Search by header result article')
 def test_search_by_header_result_article(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -42,6 +51,8 @@ def test_search_by_header_result_article(driver):
     assert '65216' in search_page.product_article_title.text
 
 
+@allure.feature('Search')
+@allure.story('Search by header result collection name')
 def test_search_by_header_result_collection_name(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -53,6 +64,8 @@ def test_search_by_header_result_collection_name(driver):
     assert 'Abba' in search_page.product_collection_name_title.text
 
 
+@allure.feature('Search')
+@allure.story('Search by header result not found')
 def test_search_by_header_result_not_found(driver):
     home_page = HomePage(driver)
     home_page.open()

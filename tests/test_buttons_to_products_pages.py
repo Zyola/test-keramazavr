@@ -7,8 +7,11 @@ from pages.catalog_plumbing_and_furniture_page import PlumbingAndFurniturePage
 from pages.catalog_bathroom_tile_page import BathroomTalePage
 from pages.catalog_wall_tile_page import WallTalePage
 from pages.catalog_floor_tile_page import FloorTalePage
+import allure
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open ceramic tale by catalog')
 def test_open_ceramic_tale_by_catalog(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -18,6 +21,8 @@ def test_open_ceramic_tale_by_catalog(driver):
     assert 'Керамическая плитка' in catalog_ceramic_tale_page.ceramic_tale_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open ceramic granite by catalog')
 def test_open_ceramic_granite_by_catalog(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -27,6 +32,8 @@ def test_open_ceramic_granite_by_catalog(driver):
     assert 'Керамический гранит' in catalog_ceramic_granite_page.ceramic_granite_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open mosaic by catalog')
 def test_open_mosaic_by_catalog(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -36,6 +43,8 @@ def test_open_mosaic_by_catalog(driver):
     assert 'Мозаика' in catalog_mosaic_page.mosaic_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open plumbing and furniture by catalog')
 def test_open_plumbing_and_furniture_by_catalog(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -45,6 +54,8 @@ def test_open_plumbing_and_furniture_by_catalog(driver):
     assert 'Сантехника и мебель' in catalog_plumbing_and_furniture_page.plumbing_and_furniture_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open tale for bathroom by left menu')
 def test_open_bathroom_tile_by_left_menu(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -54,6 +65,8 @@ def test_open_bathroom_tile_by_left_menu(driver):
     assert 'Плитка для ванной' in catalog_bathroom_tile_page.bathroom_tale_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open tale for wall by left menu')
 def test_open_wall_tile_by_left_menu(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -63,6 +76,8 @@ def test_open_wall_tile_by_left_menu(driver):
     assert 'Плитка для стен' in catalog_wall_tile_page.wall_tale_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open tale for floor by left menu')
 def test_open_floor_tile_by_left_menu(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -72,6 +87,8 @@ def test_open_floor_tile_by_left_menu(driver):
     assert 'Плитка для пола' in catalog_floor_tile_page.floor_tale_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open ceramic tale by left menu')
 def test_open_ceramic_tale_by_left_menu(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -81,6 +98,8 @@ def test_open_ceramic_tale_by_left_menu(driver):
     assert 'Керамическая плитка' in ceramic_tale_page.ceramic_tale_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open ceramic granite by left menu')
 def test_open_ceramic_granite_by_left_menu(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -90,6 +109,8 @@ def test_open_ceramic_granite_by_left_menu(driver):
     assert 'Керамический гранит' in ceramic_granite_page_by.ceramic_granite_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open mosaic by left menu')
 def test_open_mosaic_by_left_menu(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -99,6 +120,8 @@ def test_open_mosaic_by_left_menu(driver):
     assert 'Мозаика' in mosaic_page_by.mosaic_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open plumbing and furniture by left menu')
 def test_open_plumbing_and_furniture_by_left_menu(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -108,6 +131,8 @@ def test_open_plumbing_and_furniture_by_left_menu(driver):
     assert 'Сантехника и мебель' in plumbing_and_furniture_page_by.plumbing_and_furniture_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open tale for bathroom by icon')
 def test_open_bathroom_tile_by_icon(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -116,6 +141,8 @@ def test_open_bathroom_tile_by_icon(driver):
     assert 'Плитка для ванной' in catalog_bathroom_tile_page.bathroom_tale_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open tale for wall by icon')
 def test_open_wall_tile_by_icon(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -124,6 +151,8 @@ def test_open_wall_tile_by_icon(driver):
     assert 'Плитка для стен' in catalog_wall_tile_page.wall_tale_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open tale for floor by icon')
 def test_open_floor_tile_by_icon(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -132,6 +161,8 @@ def test_open_floor_tile_by_icon(driver):
     assert 'Плитка для пола' in catalog_floor_tile_page.floor_tale_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open ceramic tale by icon')
 def test_open_ceramic_tale_by_icon(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -140,6 +171,8 @@ def test_open_ceramic_tale_by_icon(driver):
     assert 'Керамическая плитка' in ceramic_tale_page.ceramic_tale_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open ceramic granite by icon')
 def test_open_ceramic_granite_by_icon(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -148,6 +181,8 @@ def test_open_ceramic_granite_by_icon(driver):
     assert 'Керамический гранит' in ceramic_granite_page_by.ceramic_granite_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open mosaic by icon')
 def test_open_mosaic_by_icon(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -156,6 +191,8 @@ def test_open_mosaic_by_icon(driver):
     assert 'Мозаика' in mosaic_page_by.mosaic_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open plumbing and furniture by icon')
 def test_open_plumbing_and_furniture_by_icon(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -164,6 +201,8 @@ def test_open_plumbing_and_furniture_by_icon(driver):
     assert 'Сантехника и мебель' in plumbing_and_furniture_page_by.plumbing_and_furniture_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open tale for bathroom by bottom menu')
 def test_open_bathroom_tile_by_bottom_menu(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -172,6 +211,8 @@ def test_open_bathroom_tile_by_bottom_menu(driver):
     assert 'Плитка для ванной' in catalog_bathroom_tile_page.bathroom_tale_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open tale for wall by bottom menu')
 def test_open_wall_tile_by_bottom_menu(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -180,6 +221,8 @@ def test_open_wall_tile_by_bottom_menu(driver):
     assert 'Плитка для стен' in catalog_wall_tile_page.wall_tale_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open tale for floor by bottom menu')
 def test_open_floor_tile_by_bottom_menu(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -188,6 +231,8 @@ def test_open_floor_tile_by_bottom_menu(driver):
     assert 'Плитка для пола' in catalog_floor_tile_page.floor_tale_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open ceramic tale by bottom menu')
 def test_open_ceramic_tale_by_bottom_menu(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -196,6 +241,8 @@ def test_open_ceramic_tale_by_bottom_menu(driver):
     assert 'Керамическая плитка' in ceramic_tale_page.ceramic_tale_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open ceramic granite by bottom menu')
 def test_open_ceramic_granite_by_bottom_menu(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -204,6 +251,8 @@ def test_open_ceramic_granite_by_bottom_menu(driver):
     assert 'Керамический гранит' in ceramic_granite_page_by.ceramic_granite_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open mosaic by bottom menu')
 def test_open_mosaic_by_bottom_menu(driver):
     home_page = HomePage(driver)
     home_page.open()
@@ -212,6 +261,8 @@ def test_open_mosaic_by_bottom_menu(driver):
     assert 'Мозаика' in mosaic_page_by.mosaic_title_check.text
 
 
+@allure.feature('Buttons to product categories pages')
+@allure.story('Open plumbing and furniture by bottom menu')
 def test_open_plumbing_and_furniture_by_bottom_menu(driver):
     home_page = HomePage(driver)
     home_page.open()

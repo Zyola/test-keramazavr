@@ -1,7 +1,10 @@
 from pages.catalog_ceramic_tale_page import CeramicTalePage
 from time import sleep
+import allure
 
 
+@allure.feature('Sorting')
+@allure.story('Sorting by cheapest')
 def test_sorting_products_by_cheapest(driver):
     catalog_ceramic_page = CeramicTalePage(driver)
     catalog_ceramic_page.open()
@@ -16,6 +19,8 @@ def test_sorting_products_by_cheapest(driver):
     assert f < s
 
 
+@allure.feature('Sorting')
+@allure.story('Sorting by most expensive')
 def test_sorting_products_by_most_expensive(driver):
     catalog_ceramic_page = CeramicTalePage(driver)
     catalog_ceramic_page.open()

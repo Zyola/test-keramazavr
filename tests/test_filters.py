@@ -1,8 +1,11 @@
 from pages.catalog_ceramic_tale_page import CeramicTalePage
 from selenium.webdriver.common.action_chains import ActionChains
 from time import sleep
+import allure
 
 
+@allure.feature('Filters')
+@allure.story('Appointment filter')
 def test_appointment_filter(driver):
     catalog_ceramic_page = CeramicTalePage(driver)
     catalog_ceramic_page.open()
@@ -17,6 +20,8 @@ def test_appointment_filter(driver):
     assert 'Для стен' in catalog_ceramic_page.product_for_walls.text
 
 
+@allure.feature('Filters')
+@allure.story('Application filter')
 def test_application_filter(driver):
     catalog_ceramic_page = CeramicTalePage(driver)
     catalog_ceramic_page.open()
@@ -31,6 +36,8 @@ def test_application_filter(driver):
     assert 'Для кухни' in catalog_ceramic_page.product_for_kitchen.text
 
 
+@allure.feature('Filters')
+@allure.story('Manufacturer filter')
 def test_manufacturer_filter(driver):
     catalog_ceramic_page = CeramicTalePage(driver)
     catalog_ceramic_page.open()
@@ -45,6 +52,8 @@ def test_manufacturer_filter(driver):
     assert 'Atlas Concorde' in catalog_ceramic_page.product_by_atlas_concorde.text
 
 
+@allure.feature('Filters')
+@allure.story('Surface pattern filter')
 def test_surface_pattern_filter(driver):
     catalog_ceramic_page = CeramicTalePage(driver)
     catalog_ceramic_page.open()
@@ -60,6 +69,8 @@ def test_surface_pattern_filter(driver):
     assert 'Дерево' in catalog_ceramic_page.product_wood_pattern_tittle.text
 
 
+@allure.feature('Filters')
+@allure.story('Colour filter')
 def test_colour_filter(driver):
     catalog_ceramic_page = CeramicTalePage(driver)
     catalog_ceramic_page.open()
@@ -74,6 +85,8 @@ def test_colour_filter(driver):
     assert 'Белый' in catalog_ceramic_page.product_colour_white_title.text
 
 
+@allure.feature('Filters')
+@allure.story('Form filter')
 def test_form_filter(driver):
     catalog_ceramic_page = CeramicTalePage(driver)
     catalog_ceramic_page.open()
@@ -88,6 +101,8 @@ def test_form_filter(driver):
     assert 'Кабанчик' in catalog_ceramic_page.product_form_wild_boar_title.text
 
 
+@allure.feature('Filters')
+@allure.story('Surface filter')
 def test_surface_filter(driver):
     catalog_ceramic_page = CeramicTalePage(driver)
     catalog_ceramic_page.open()
@@ -103,6 +118,8 @@ def test_surface_filter(driver):
     assert 'Матовая' in catalog_ceramic_page.product_surface_matt_title.text
 
 
+@allure.feature('Filters')
+@allure.story('Size filter')
 def test_size_filter(driver):
     catalog_ceramic_page = CeramicTalePage(driver)
     catalog_ceramic_page.open()
@@ -118,6 +135,8 @@ def test_size_filter(driver):
     assert '100x100' in catalog_ceramic_page.product_size_100_100_title.text
 
 
+@allure.feature('Filters')
+@allure.story('Cost filter')
 def test_cost_filter(driver):
     catalog_ceramic_page = CeramicTalePage(driver)
     catalog_ceramic_page.open()
