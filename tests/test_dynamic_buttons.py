@@ -36,7 +36,6 @@ def test_popular_arrow_prev(driver):
     home_page.open()
     next_arrow_target = home_page.popular_target_field
     ActionChains(driver).move_to_element(next_arrow_target).perform()
-    sleep(1)
     home_page.popular_second_page_scroll_button.click()
     sleep(1)
     home_page.popular_arrow_prev.click()
