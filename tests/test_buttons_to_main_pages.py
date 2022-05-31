@@ -4,8 +4,8 @@ from pages.home_page import HomePage
 from pages.catalog_page import CatalogPage
 from pages.delivery_page import DeliveryPage
 from pages.buy_info_page import BuyInfoPage
-from pages.pay_info_page import PayInfoPage
 from pages.contacts_page import ContactsPage
+from pages.pay_info_page import PayInfoPage
 from pages.cart_page import CartPage
 import allure
 
